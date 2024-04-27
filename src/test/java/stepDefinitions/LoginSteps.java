@@ -34,7 +34,8 @@ public class LoginSteps {
 	}
 
 	@Then("the user should be redirected to the My Account page")
-	public void the_user_should_be_redirected_to_the_my_account_page() {
+	public void the_user_should_be_redirected_to_the_my_account_page() throws InterruptedException {
+		Thread.sleep(5000);
 	    boolean status = driver.findElement(By.xpath("//a[@class='ico-logout']")).isDisplayed();
 	}
 
